@@ -1,9 +1,9 @@
 name: Build
-description: Build application with Maven and create a new Docker image
+description: Build to create a new Docker image
 inputs:
   dockerfile_path:
     description: "Path to the Dockerfile"
-    required: true
+    required: false
     default: "Dockerfile"
 runs:
   using: composite
