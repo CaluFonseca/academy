@@ -21,13 +21,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-
-    - name: Build with Maven
-      uses: CaluFonseca/academy/.github/actions/maven_build@master
-
-    - name: Build Docker Image
-      uses: CaluFonseca/academy/.github/actions/docker_build@master
-
+    - uses: CaluFonseca/academy/.github/actions/maven_build@master
+    - uses: CaluFonseca/academy/.github/actions/docker_build@master
     - name: List Docker Images
       run: docker image ls | grep $(date +%d-%m-%y) | head -1
 
